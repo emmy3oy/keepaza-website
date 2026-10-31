@@ -1,0 +1,146 @@
+
+.site-navbar {
+  width: 100%;
+  padding: 18px 5%;
+  background: #e94122;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-container {
+  max-width: 1350px;
+  min-height: 58px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  color: #f5f1f1;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 750;
+  flex-shrink: 0;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar-downloads {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-button {
+  min-width: 158px;
+  min-height: 52px;
+  padding: 7px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.store-button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.store-button svg {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+.store-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.store-text small {
+  font-size: 10px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.store-text strong {
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .site-navbar {
+    padding: 2px 4px;
+  }
+
+  .navbar-container {
+    min-height: 42px;
+    gap: 8px;
+  }
+
+  .navbar-brand {
+    gap: 5px;
+    font-size: 17px;
+  }
+
+  .navbar-brand img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .navbar-downloads {
+    gap: 6px;
+  }
+
+  .store-button {
+    min-width: 0;
+    min-height: 36px;
+    padding: 5px 8px;
+    gap: 5px;
+    border-radius: 8px;
+  }
+
+  .store-button svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .store-text small {
+    font-size: 7px;
+  }
+
+  .store-text strong {
+    font-size: 10px;
+  }
+
+
+@media (max-width: 360px) {
+  .navbar-brand {
+    font-size: 15px;
+  }
+
+  .navbar-brand img {
+    width: 24px;
+    height: 24px;
+  }
+}
+}
