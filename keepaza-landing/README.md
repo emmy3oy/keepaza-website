@@ -10,7 +10,7 @@ Follow these steps to run the project on your computer.
 
 ### 1. Clone the repository
 
-git clone https://github.com/emmy3oy/keepaza-website.git
+git clone https://github.com/emmy3oy/keepaza-website/tree/main/keepaza-landing
 
 ### 2. Open the project folder
 
