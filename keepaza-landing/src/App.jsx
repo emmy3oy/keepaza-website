@@ -5,10 +5,11 @@ import Navbar from "./components/Navbar/Navbar";
 import NewWaySection from "./components/NewWaySection/NewWaySection";
 import ProfileSection from "./components/ProfileSection/ProfileSection";
 
+
 function App() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Hero />
       <ProfileSection />
       <NewWaySection />
@@ -17,5 +18,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

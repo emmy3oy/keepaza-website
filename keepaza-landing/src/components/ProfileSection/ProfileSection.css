@@ -7,6 +7,7 @@
 }
 
 .profile-content {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -35,9 +36,14 @@
 }
 
 .profile-card {
-  min-height: 330px;
+  width: 100%;
+  min-width: 0;
+  min-height: 400px;
   padding: 55px;
   border-radius: 46px;
+  box-shadow: 0 12px 20px rgba(50, 20, 70, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bank-card {
@@ -59,6 +65,7 @@
   border-radius: 50%;
   background: #e9c1e9;
   color: #512477;
+  transition: transform 0.3s ease;
 }
 
 .invoice-card .profile-icon {
@@ -72,40 +79,38 @@
 }
 
 .profile-card h3 {
+  max-width: 380px;
   margin: 30px 0 15px;
   font-size: clamp(24px, 2.5vw, 34px);
   line-height: 1.25;
 }
 
 .profile-card p {
+  max-width: 390px;
   margin: 0;
   font-size: 18px;
   line-height: 1.7;
 }
 
-.profile-card {
-  min-height: 400px;
-  padding: 55px;
-  border-radius: 46px;
-  box-shadow: 0 12px 20px rgba(50, 20, 70, 0.08);
-}
+/* Desktop hover animation */
+@media (hover: hover) {
+  .profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(50, 20, 70, 0.18);
+  }
 
-.profile-card h3 {
-  max-width: 380px;
+  .profile-card:hover .profile-icon {
+    transform: scale(1.1) rotate(-5deg);
+  }
 }
-
-.profile-card p {
-  max-width: 390px;
-}
-
 
 @media (max-width: 700px) {
   .profile-section {
-    padding: 55px 22px 65px;
+    padding: 55px 20px 65px;
   }
 
   .profile-content h2 {
-    font-size: clamp(42px, 9vw, 64px);
+    font-size: clamp(36px, 9vw, 54px);
     letter-spacing: -2px;
   }
 
@@ -115,16 +120,16 @@
 
   .profile-description {
     margin: 24px auto 45px;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.6;
   }
 
   .profile-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 22px;
   }
-  
-   .profile-card {
+
+  .profile-card {
     min-height: 280px;
     padding: 32px;
     border-radius: 30px;
@@ -145,41 +150,20 @@
   }
 }
 
-/* Card hover animation */
-.profile-card {
-  cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.profile-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 35px rgba(50, 20, 70, 0.18);
-}
-
-
-/* Keep the cards still on touch devices */
-@media (hover: none) {
-  .profile-card:hover {
-    transform: none;
-    box-shadow: 0 12px 20px rgba(50, 20, 70, 0.08);
+@media (max-width: 360px) {
+  .profile-section {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
-  .profile-card:hover .profile-icon {
-    transform: none;
+  .profile-card {
+    padding: 25px;
   }
 }
 
-/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .profile-card,
   .profile-icon {
     transition: none;
-  }
-
-  .profile-card:hover,
-  .profile-card:hover .profile-icon {
-    transform: none;
   }
 }

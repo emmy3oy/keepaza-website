@@ -3,7 +3,7 @@
   width: 100%;
   padding: 18px 5%;
   background: #e94122;
-  border-bottom: 1px solid #eee;
+  border: none;
   position: relative;
   z-index: 10;
 }
@@ -21,6 +21,7 @@
 .navbar-brand {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   color: #f5f1f1;
   text-decoration: none;
   font-size: 30px;
@@ -89,16 +90,16 @@
 
 @media (max-width: 520px) {
   .site-navbar {
-    padding: 2px 4px;
+    padding: 8px 10px;
   }
 
   .navbar-container {
     min-height: 42px;
-    gap: 8px;
+    gap: 6px;
   }
 
   .navbar-brand {
-    gap: 5px;
+    gap: 4px;
     font-size: 17px;
   }
 
@@ -108,20 +109,20 @@
   }
 
   .navbar-downloads {
-    gap: 6px;
+    gap: 5px;
   }
 
   .store-button {
     min-width: 0;
     min-height: 36px;
-    padding: 5px 8px;
-    gap: 5px;
-    border-radius: 8px;
+    padding: 5px 7px;
+    gap: 4px;
+    border-radius: 7px;
   }
 
   .store-button svg {
-    width: 19px;
-    height: 19px;
+    width: 17px;
+    height: 17px;
   }
 
   .store-text small {
@@ -131,7 +132,7 @@
   .store-text strong {
     font-size: 10px;
   }
-
+}
 
 @media (max-width: 360px) {
   .navbar-brand {
@@ -142,5 +143,8 @@
     width: 24px;
     height: 24px;
   }
-}
+
+  .store-button {
+    padding: 5px;
+  }
 }
